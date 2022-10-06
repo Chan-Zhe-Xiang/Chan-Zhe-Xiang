@@ -195,9 +195,7 @@ body {
     height: 15px;
     width: 15px;
     border-radius: 50px;
-}
-.cursor::before {
-    background-color: #388be9;
+    z-index: 100;
 }
 .cursor.click::before {
     animation: click 0.5s ease forwards;
