@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    cursor: none;
 }
 
 h1 {
@@ -169,5 +170,46 @@ body {
     .skill-card,
     .skill-card:hover {
         display: block;
+    }
+}
+
+.cursor {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.cursor::after,
+.cursor::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #388be9;
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+}
+.cursor::before {
+    background-color: #388be9;
+}
+.cursor.click::before {
+    animation: click 0.5s ease forwards;
+    background-color: #388be9;
+}
+@keyframes click {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(3);
     }
 }
