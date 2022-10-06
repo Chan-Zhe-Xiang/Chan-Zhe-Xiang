@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Sacramento", sans-serif;
+    font-size: 5.625rem;
+    margin-top: 3rem;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+h3 {
+    padding-bottom: 2rem;
+}
+
+h2,
+h3 {
+    color: #66bfbf;
+}
+
+.name {
+    margin: 10rem auto 13rem;
+}
+
+.name h1,
+.name h3 {
+    color: #004faa;
+}
+
+#navbarSupportedContent {
+    text-align: end;
+}
+
+.navbar {
+    background-color: #b0d0e2ef;
+    transition: top 0.8s ease;
+    padding: 1rem 4rem;
+}
+
+.navbar-top {
+    background-color: #b0d0e2ef;
+    transition: top 0.8s ease, background-color 0.8s ease;
+}
+
+.navbar-down {
+    background-color: #ccd7e1ef;
+    transition: top 0.8s ease, background-color 0.8s ease;
+}
+
+.nav-item {
+    padding-left: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+
+.nav-item a:link,
+.nav-item a:visited {
+    text-decoration: none;
+    color: #388be9;
+}
+
+.nav-item a:hover {
+    color: #004faa;
+}
+
+.nav-item a:active {
+    color: #388be9;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    height: 6rem;
+    opacity: 0.8;
+}
+
+header {
+    margin: 20rem 10% 16rem;
+}
+
+header::before {
+    background-image: url("./images/profile-background.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 45rem;
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.contact ul li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 1.5rem;
+}
+
+.contact-icons {
+    color: #003a7c;
+}
+
+.details {
+    padding: 2.5rem;
+}
+
+.intro {
+    margin: 3rem auto 5rem;
+    max-width: 30rem;
+}
+
+.skill-card {
+    align-items: center;
+    border-radius: 50px;
+    background: #cad5de;
+    box-shadow: 20px 20px 60px #acb5bd, -20px -20px 60px #e8f5ff;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 80px;
+    padding: 2rem 3rem;
+    max-width: 50rem;
+}
+
+.skill-card:hover {
+    align-items: center;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #b8c2cb, #dae6f1);
+    box-shadow: 20px 20px 60px #adb7bf, -20px -20px 60px #ebf7ff;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 5rem;
+    padding: 2rem 3rem;
+}
+
+.skill-card img {
+    margin: 2rem;
+}
+
+.skill-card:nth-of-type(2n) img {
+    order: 2;
+}
+
+.skills img {
+    border-radius: 1.5rem;
+    height: 7rem;
+}
+
+body {
+    background-color: #ccd7e1;
+    color: rgb(44, 44, 44);
+    font-family: "Ubuntu", sans-serif;
+    /* margin: 2% 10%; */
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .skill-card,
+    .skill-card:hover {
+        display: block;
+    }
+}
