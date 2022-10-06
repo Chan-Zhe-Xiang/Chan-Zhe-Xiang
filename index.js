@@ -29,7 +29,7 @@ window.addEventListener("mousemove", (e) => {
 window.addEventListener("scroll", () => {
     const fromTop = cursor.getAttribute("data-fromTop");
     cursor.style.top = scrollY + parseInt(fromTop) + "px";
-    console.log(scrollY);
+    // console.log(scrollY);
 });
 
 window.addEventListener("click", () => {
@@ -41,3 +41,21 @@ window.addEventListener("click", () => {
         cursor.classList.add("click");
     }
 });
+
+function fadeIn() {
+    let pageBottom = scrollY + window.innerHeight;
+    let tags = document.getElementsByClassName("fade");
+
+    for (let i = 0; i < tags.length; i++) {
+        let tag = tags[i];
+        if (tag.offsetTop < pageBottom) {
+            tag.classList.add("visible");
+        } else {
+            tag.classList.remove("visible");
+        }
+    }
+}
+
+window.addEventListener("scroll", fadeIn);
+
+window.addEventListener("load", fadeIn);
